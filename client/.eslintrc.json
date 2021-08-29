@@ -1,0 +1,58 @@
+{
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": [
+      "airbnb-base",
+      "airbnb/rules/react",
+      "airbnb/hooks",
+      "plugin:react/recommended",
+      "prettier",
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 11,
+      "sourceType": "module"
+    },
+    "plugins": ["prettier", "react"],
+    "rules": {
+      "react/jsx-fragments": [1, "element"],
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "react/static-property-placement": "off",
+      "react/jsx-props-no-spreading": "off",
+      "react/no-array-index-key": "off",
+      "no-param-reassign": [2, { "props": false }],
+      "import/no-extraneous-dependencies": ["error", {"devDependencies": false, "optionalDependencies": false, "peerDependencies": false}],
+      "import/prefer-default-export": "off",
+      "react/react-in-jsx-scope": "off",
+      "import/order": [
+        "error",
+        {
+          "newlines-between": "always-and-inside-groups",
+          "alphabetize": {
+            "order": "asc"
+          }
+        }
+      ],
+      "func-names": "off",
+      "no-unused-vars": [
+        "error",
+        {
+          "argsIgnorePattern": "next"
+        }
+      ],
+      "sort-imports": [
+        "error",
+        {
+          "ignoreDeclarationSort": true,
+          "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+        }
+      ]
+    }
+   }
+   
