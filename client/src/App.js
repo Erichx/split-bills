@@ -4,13 +4,15 @@ function App() {
   return (
     <div className="App">
       <div className="logo">Logo</div>
-      <div className="total">
-        <p className="small">Total</p>
-        <input className="total-amount" type="text" value="200.00" />
-      </div>
-      <div className="you-part">
-        <p className="small">your share:</p>
-        <p className="your-amount">110.00</p>
+      <div className="amount">
+        <div className="total">
+          <p className="small">Total</p>
+          <input className="total-amount" type="text" value="200.00" />
+        </div>
+        <div className="your-part">
+          <p className="small">your share:</p>
+          <p className="your-amount">110.00</p>
+        </div>
       </div>
       <div className="input-item">
         <label forHtml="item-name" />
@@ -37,8 +39,11 @@ function App() {
           </div>
         </div>
         <div className="tip-container">
-          <input className="tip-percent" type="text" value="10" />
-          <p className="item">10.00</p>
+          <p className="">
+            Tip Percent
+            <input className="tip-percent" type="text" value="10" />
+          </p>
+          <p className="tip-amout">10.00</p>
         </div>
       </div>
     </div>

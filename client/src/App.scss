@@ -1,0 +1,51 @@
+body {
+  width: 100%;
+}
+.App {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.logo {
+  width: 25%;
+  background-color: brown;
+}
+.amount {
+  width: 75%;
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.input-item {
+  width: 100%;
+  display: flex;
+  background-color: darkorange;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.list,
+.list-container {
+  width: 100%;
+}
+.item {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.tip-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  p:first-of-type::after {
+    content: "%";
+  }
+}
