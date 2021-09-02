@@ -15,13 +15,12 @@ function App() {
         </div>
       </div>
       <div className="input-item">
-        <label forHtml="item-name" />
-        <input id="item-name" className="input-basic" type="text" value="" />
-        <label forHtml="item-value" />
-        <input id="item-value" className="input-basic" type="text" value="" />
         <button className="item-add" type="button">
-          add
+          +
         </button>
+        <input id="item-name" className="input-basic" type="text" value="" />
+
+        <input id="item-value" className="input-basic" type="text" value="" />
       </div>
       <div className="list">
         <div className="list-container">
@@ -41,7 +40,7 @@ function App() {
         <div className="tip-container">
           <p className="">
             Tip Percent
-            <input className="tip-percent" type="text" value="10" />
+            <input className="tip-percent" type="text" value="100" />
           </p>
           <p className="tip-amout">10.00</p>
         </div>

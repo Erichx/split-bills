@@ -1,5 +1,17 @@
 body {
-  width: 100%;
+  width: calc(100% - 10rem);
+  padding: 1rem 5rem;
+}
+p,
+input,
+label,
+div {
+  font-size: 1.4rem;
+}
+input {
+  border: 0rem transparent solid;
+  border-bottom: 1px solid black;
+  background-color: transparent;
 }
 .App {
   width: 100%;
@@ -9,25 +21,54 @@ body {
 }
 .logo {
   width: 25%;
-  background-color: brown;
 }
 .amount {
   width: 75%;
-  background-color: cadetblue;
   display: flex;
   flex-direction: column;
   align-content: flex-end;
   justify-content: flex-start;
   align-items: flex-end;
+  flex-wrap: wrap;
+  div {
+    width: 50%;
+  }
+}
+.small {
+  font-size: 0.7rem;
+  margin: 1rem 0rem 0rem;
+}
+.total-amount,
+.your-amount {
+  font-size: 2rem;
+  width: calc(100% - 0.3rem);
+  border: 0rem transparent solid;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  margin: 0rem;
 }
 .input-item {
   width: 100%;
   display: flex;
-  background-color: darkorange;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: row;
+  margin: 1rem 0rem;
+}
+.input-basic {
+  margin: 1rem 0rem;
+  font-size: 1.4rem;
+}
+#item-name {
+  width: 60%;
+}
+#item-value {
+  width: 10%;
+}
+.item-add {
+  font-size: 1.3rem;
+  padding: 0.3rem 0.6rem;
 }
 .list,
 .list-container {
@@ -39,6 +80,10 @@ body {
   align-content: center;
   flex-wrap: nowrap;
   justify-content: space-between;
+  margin-bottom: 1rem;
+  .item-remove {
+    padding: 0rem 1rem;
+  }
 }
 .tip-container {
   display: flex;
@@ -47,5 +92,9 @@ body {
   align-items: center;
   p:first-of-type::after {
     content: "%";
+  }
+
+  .tip-percent {
+    width: 3rem;
   }
 }
