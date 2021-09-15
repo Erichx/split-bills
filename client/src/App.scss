@@ -1,29 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+html {
+  height: 100%;
+}
 body {
-  width: calc(100% - 10rem);
-  padding: 1rem 5rem;
+  font-family: "Nunito", sans-serif;
+  padding: 1rem 1rem;
+  background: rgb(31, 32, 56);
+  background: linear-gradient(
+    0deg,
+    rgba(31, 32, 56, 1) 0%,
+    rgba(41, 43, 77, 1) 100%
+  );
 }
 p,
 input,
 label,
 div {
   font-size: 1.4rem;
+  color: #b7b7ce;
+  margin: 0rem;
+}
+input,
+textarea,
+select {
+  font-family: inherit;
 }
 input {
   border: 0rem transparent solid;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #8187b0;
   background-color: transparent;
+  font-family: "Nunito", sans-serif;
+  &::placeholder {
+    font-family: "Nunito", sans-serif;
+    color: #8187b0;
+  }
 }
 .App {
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-.logo {
-  width: 25%;
+  justify-content: flex-end;
 }
 .amount {
-  width: 75%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-content: flex-end;
@@ -31,19 +53,30 @@ input {
   align-items: flex-end;
   flex-wrap: wrap;
   div {
-    width: 50%;
+    width: 100%;
   }
 }
 .small {
   font-size: 0.7rem;
-  margin: 1rem 0rem 0rem;
+  font-weight: bold;
+}
+.total {
+  .small {
+    margin: 0rem;
+  }
+}
+.your-part {
+  label.small {
+    display: block;
+    margin: 1rem 0rem 0rem;
+  }
 }
 .total-amount,
 .your-amount {
   font-size: 2rem;
   width: calc(100% - 0.3rem);
   border: 0rem transparent solid;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #8187b0;
   background-color: transparent;
   margin: 0rem;
 }
@@ -64,15 +97,42 @@ input {
   width: 60%;
 }
 #item-value {
+  text-align: right;
   width: 10%;
 }
+.button-amount {
+  font-size: 1.6rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 100%;
+  padding: 0rem;
+  border: solid 0px transparent;
+  color: white;
+}
 .item-add {
-  font-size: 1.3rem;
-  padding: 0.3rem 0.6rem;
+  background: rgb(39, 187, 179);
+  background: linear-gradient(
+    34deg,
+    rgba(39, 187, 179, 1) 14%,
+    rgba(234, 249, 136, 1) 100%
+  );
 }
 .list,
 .list-container {
   width: 100%;
+}
+.list,
+.input-item,
+.amount {
+  background: rgb(49, 51, 89);
+  background: linear-gradient(
+    50deg,
+    rgba(49, 51, 89, 1) 0%,
+    rgba(53, 55, 102, 1) 100%
+  );
+  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  border-radius: 1rem;
 }
 .item {
   width: 100%;
@@ -81,8 +141,10 @@ input {
   flex-wrap: nowrap;
   justify-content: space-between;
   margin-bottom: 1rem;
+  align-items: center;
   .item-remove {
-    padding: 0rem 1rem;
+    background: #f33c42;
+    background: linear-gradient(144deg, #ff6a6e 19%, #f33c42 100%);
   }
 }
 .tip-container {
@@ -95,6 +157,8 @@ input {
   }
 
   .tip-percent {
+    font-weight: bold;
+    text-align: right;
     width: 3rem;
   }
 }
